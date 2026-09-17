@@ -1,0 +1,100 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  background: linear-gradient(180deg, #fff7e8 0%, #ffe8cf 100%);
+}
+
+.page-header h1 {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  color: #7a5c3e;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+}
+
+.page-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.control-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #ffffff;
+  color: #c9791a;
+  border: 2px solid #f5a623;
+  transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.control-button:hover {
+  transform: translateY(-2px);
+}
+
+.control-button:focus-visible {
+  outline: 3px solid #4a90e2;
+  outline-offset: 2px;
+}
+
+.control-button.primary.is-active {
+  background: #f5a623;
+  color: #fff;
+}
+
+.page-footer {
+  color: #a68b6c;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  .page {
+    gap: 1.75rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .controls {
+    width: 100%;
+  }
+
+  .control-button {
+    flex: 1 1 45%;
+    padding: 0.9rem 1rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .page-main {
+    gap: 2.5rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .page {
+    gap: 3rem;
+  }
+}
+
+@media (hover: none) {
+  .control-button {
+    padding: 1rem 1.5rem;
+  }
+}
